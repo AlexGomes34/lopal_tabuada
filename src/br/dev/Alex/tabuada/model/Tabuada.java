@@ -34,13 +34,17 @@ public class Tabuada {
 	
 	public void mostrarTabuada() {
 		
+		double tamanho = maximoMultiplicador - minimoMultiplicador + 1;
 		
+		String[] tabuada = new String[(int) tamanho];
 		
 		while (minimoMultiplicador < maximoMultiplicador + 1) {
 			
 		double produto = multiplicando * minimoMultiplicador;
 		System.out.println(multiplicando + " X " + minimoMultiplicador + " = " + produto);
 		minimoMultiplicador = minimoMultiplicador + 1;
+		
+		
 			
 	}
 		
