@@ -1,6 +1,7 @@
 package br.dev.Alex.tabuada.gui;
 
 import java.awt.event.ActionEvent;
+
 import java.awt.event.ActionListener;
 import java.util.Scanner;
 
@@ -120,7 +121,9 @@ public class TelaTabuada {
 				double maximoMultiplicadorDouble = Double.valueOf(maximoMultiplicador);
 				t1.setMaximoMultiplicador(maximoMultiplicadorDouble);
 				
-				t1.mostrarTabuada();
+				String[] tabuadaResultado = t1.mostrarTabuada();
+						
+				listTabuada.setListData(tabuadaResultado);
 				
 			}
 		});
@@ -134,6 +137,10 @@ public class TelaTabuada {
 				textMinimoMultiplicador.setText("");
 				textMaximoMultiplicador.setText("");
 				textMultiplicando.requestFocus();
+				
+				listTabuada.setListData(new String[0]);
+				
+				
 				
 			}
 		});

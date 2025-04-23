@@ -32,21 +32,26 @@ public class Tabuada {
 		return maximoMultiplicador;
 	}
 	
-	public void mostrarTabuada() {
+	public String[] mostrarTabuada() {
 		
 		double tamanho = maximoMultiplicador - minimoMultiplicador + 1;
 		
 		String[] tabuada = new String[(int) tamanho];
 		
+		int indice = 0;
+		
 		while (minimoMultiplicador < maximoMultiplicador + 1) {
 			
 		double produto = multiplicando * minimoMultiplicador;
-		System.out.println(multiplicando + " X " + minimoMultiplicador + " = " + produto);
-		minimoMultiplicador = minimoMultiplicador + 1;
 		
+
+		tabuada[indice] = multiplicando + " X " + minimoMultiplicador + " = " + produto;
 		
-			
+		minimoMultiplicador+=1; //++ incrementa + 1 algoritimo
+		indice++;
+		
 	}
+		return tabuada;
 		
 	}
 }
